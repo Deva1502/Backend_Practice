@@ -1,18 +1,23 @@
 const http = require('http');
-const fs = require('fs');
-const myserver = http.createServer((req, res) => {
-    const log =`${Date.now()}:${req.url } new req recieved\n`;
-    fs.appendFile('log.txt', log, (err) => {
-        if (err) {
-            console.log(err);
-        }
-        res.end("Hello from my server");
-    });
-});
+const express = require('express');
+const { send } = require('process');
+const app = express();
+
+// express ki vajah se mujhe ye bhi karne ki jarurat nahi hai
+// const myserver = http.createServer(app);
+
+
+app.get('/',(req,res)=>{
+    return res.send(`Home page hai bhai jii`)
+})
+
+app.get('/about',(req,res)=>{
+    return res.send(`About page hai bhai jii`)
+})
 
 
 const PORT = 3000;
 
-myserver.listen(PORT,()=>{
+app.listen(PORT,()=>{
     console.log(`Server is running on port ${PORT}`);
 })
