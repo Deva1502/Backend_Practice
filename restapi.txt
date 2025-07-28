@@ -1,0 +1,14 @@
+Rest Api Rules
+1>server client architecture-->SSR(server side rendering)
+ssr is a way of rendering html,image,html,json on the server side and then sending it to the client side.
+
+2>Always respect http methods
+HTTP methods
+    GET/user->user data read karo and return data
+    POST/user->handle new user creation
+    PUT/user->update user
+    DELETE/user->delete user
+    PATCH/user->update user
+in practises ko acche se follow krte hai hum tb hum bol skte h ki restful api hai
+
+
